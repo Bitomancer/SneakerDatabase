@@ -1,0 +1,159 @@
+[
+   {
+      "_key":"2670465",
+      "_id":"Sneakerheads/2670465",
+      "_rev":"_aGfaWKy--_",
+      "fname":"Thomas",
+      "lname":"Smallfoot",
+      "street":"10 Cloverfield Lane",
+      "city":"Lake Charles",
+      "state":"LA",
+      "zip":54321,
+      "shoe_sizes":[
+         8,
+         8.5,
+         9
+      ],
+      "sneakers_interested_in":[
+         {
+            "model":"Air Jordan 1",
+            "brand":"Jordan",
+            "colors":[
+               "any"
+            ]
+         },
+         {
+            "model":"KD 4 Aunt Pearl",
+            "brand":"Nike",
+            "colors":[
+               "pink",
+               "blue"
+            ]
+         },
+         {
+            "model":"Lebron 9",
+            "brand":"Nike",
+            "colors":[
+               "purple",
+               "white"
+            ]
+         }
+      ]
+   },
+   {
+      "_key":"2668833",
+      "_id":"Sneakerheads/2668833",
+      "_rev":"_aGfcI1u--_",
+      "fname":"Paul",
+      "lname":"Macfarlane",
+      "street":"not disclosing my street address",
+      "city":"somewhere",
+      "state":"NY",
+      "zip":11111,
+      "shoe_sizes":[
+         10.5,
+         11
+      ],
+      "sneakers_interested_in":[
+         {
+            "model":"Lebron 10",
+            "brand":"Nike",
+            "colors":[
+               "any"
+            ]
+         },
+         {
+            "model":"KD 4",
+            "brand":"Nike",
+            "colors":[
+               "pink",
+               "blue"
+            ]
+         },
+         {
+            "model":"Lebron 9",
+            "brand":"Nike",
+            "colors":[
+               "purple",
+               "white"
+            ]
+         }
+      ]
+   },
+   {
+      "_key":"2669941",
+      "_id":"Sneakerheads/2669941",
+      "_rev":"_aGfLidi--_",
+      "fname":"John",
+      "lname":"White",
+      "street":"12 fake lane",
+      "city":"Utica",
+      "state":"NY",
+      "zip":10932,
+      "shoe_sizes":[
+         12,
+         13
+      ],
+      "sneakers_interested_in":[
+         {
+            "model":"Air Foamposite One",
+            "brand":"Nike",
+            "colors":[
+               "black"
+            ]
+         },
+         {
+            "brand":"Vans",
+            "colors":[
+               "black"
+            ]
+         },
+         {
+            "brand":"Adidas",
+            "colors":[
+               "black"
+            ]
+         }
+      ]
+   },
+   {
+      "_key":"2671977",
+      "_id":"Sneakerheads/2671977",
+      "_rev":"_aGffM4u--_",
+      "fname":"Steve",
+      "lname":"Smith",
+      "street":"81 panther st",
+      "city":"Charlotte",
+      "state":"NC",
+      "zip":23413,
+      "shoe_sizes":[
+         11,
+         12
+      ],
+      "sneakers_interested_in":[
+         {
+            "model":"Superstar 80s City Series",
+            "brand":"Adidas",
+            "colors":[
+               "any"
+            ]
+         },
+         {
+            "model":"Mirage Rowan Pro",
+            "brand":"Vans",
+            "colors":[
+               "black"
+            ]
+         },
+         {
+            "model":"Ewing 33 HI",
+            "brand":"Ewing",
+            "colors":[
+               "orange",
+               "white"
+            ]
+         }
+      ]
+   }
+]
+
