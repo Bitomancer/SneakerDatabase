@@ -1,0 +1,86 @@
+Paul Macfarlane
+CSIS: 355 - Advanced Database
+Dr Vandenberg - Spring 2020
+
+Stores Collection: Stores.json
+
+A “Store” is a representation of a sneaker store, either one that is online, in person, or both. 
+AQL allows for variability in-store data that a relational database would be too rigid to represent.
+
+Some basic Queries to test:
+
+For every store, return the name, owner, and whether or not they have uniform prices
+for S in Stores
+    		return {StoreName:S.name, Owner: S.owner, UniformPrices: S.uniform_prices}
+
+Group stores by type (in person, online, or hybrid) and return each type and the amount of each type.
+for S in Stores
+    		collect Type = S.type into T
+        		return {Type: Type, AmountOfType: length(T)}
+
+Just a nested query to retrieve all the sneakers in the dataset
+for S in Stores
+   		for N in S.sneakers_in_store[*]
+       	 		return {Model: N.model, StockInformation: (
+      	 			for sn in N.size_and_stock_info[*] 
+       	 			return sn)}
+
+Sample data: 
+
+{
+  "type": "hybrid", /* whether the store is online, an in-person shop, or both */
+  "street": "812 Broadway",
+  "zip": "10003",
+  "city": "New York",
+  "state": "NY",
+  "name": "Flight Club",
+  "owner": "Damany Weir",
+  "twitter": "flightclub", /* optional social media fields, advantage of aql
+  "facebook": "@FlightClub",
+  "uniform_prices": "N", /* whether or not a store sells shoes at different prices based on size */
+  "sneakers_in_store": [
+    {
+      "model": "KD 4 Aunt Pearl",
+      "colors": [ /* array of colors that are on the shoe */
+        "pink",
+        "black"
+      ],
+      "brand": "Nike", /* price would be an attribute if there are uniform prices */
+      "sneakerID": 100000,
+      "size_and_stock_info": [ /* holds info on size, number of that size in stock, and price if there are not uniform prices */
+        {
+          "size": 8,
+          "num_in_stock": 1,
+          "price": 500
+        }    ]
+
+Sneakerheads collection: Sneakerheads.json
+
+A “sneakerhead” is really just another name for a customer of the shoe stores.
+
+Sample data: 
+{
+  "fname": "Thomas",
+  "lname": "Smallfoot",
+  "street": "10 Cloverfield Lane",
+  "city": "Lake Charles",
+  "state": "LA",
+  "zip": 54321,
+  "shoe_sizes": [ /* people can be flexible with their shoe sizes */
+    8,
+    8.5,
+    9
+  ],
+  "sneakers_interested_in": [
+    {
+      "model": "Air Jordan 1",
+      "brand": "Jordan",
+      "colors": [
+        "Any" /*colors of the model that they like, can be specific colors, or ‘any’ */
+      ]
+    }
+]
+
+
+
+
